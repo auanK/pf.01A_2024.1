@@ -10,7 +10,7 @@ anagrama s1 s2 = sortString s1 == sortString s2
 
 -- Função para ordenar uma string ignorando espaços
 sortString :: [Char] -> [Char]
-sortString xs = selectionSort [x | x <- xs, x /= ' ']
+sortString x = selectionSort (filter (/= ' ') x)
 
 -- Função de ordenação por seleção
 selectionSort :: (Ord a) => [a] -> [a]
