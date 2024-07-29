@@ -8,7 +8,7 @@ matricula = "556027"
 anagrama :: [Char] -> [Char] -> Bool
 anagrama s1 s2 = sortString s1 == sortString s2
 
--- Função para ordenar uma string ignorando espaços usando selectionSort
+-- Função para ordenar uma string ignorando espaços
 sortString :: [Char] -> [Char]
 sortString xs = selectionSort [x | x <- xs, x /= ' ']
 
@@ -23,7 +23,7 @@ selectionSort xs = let x = maximum xs in x : selectionSort (remove x xs)
             | otherwise = y : remove x ys
 
 -- 02
--- construa função que elimine repetções de uma dada string s
+-- construa função que elimine repetições de uma dada string s
 --  sem alterar a sequência original 
 -- dos caracteres de s.
 unique :: [Char] -> [Char]
