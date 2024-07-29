@@ -12,7 +12,7 @@ anagrama s1 s2 = sortString s1 == sortString s2
 sortString :: [Char] -> [Char]
 sortString xs = selectionSort [x | x <- xs, x /= ' ']
 
--- Função de ordenação por seleção (Selection Sort)
+-- Função de ordenação por seleção
 selectionSort :: (Ord a) => [a] -> [a]
 selectionSort [] = []
 selectionSort xs = let x = maximum xs in x : selectionSort (remove x xs)
